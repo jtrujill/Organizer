@@ -13,7 +13,8 @@ module.exports = merge(common, {
   devServer: {
     host: '0.0.0.0',
     disableHostCheck: true,
-    contentBase: path.join(__dirname, '..', 'public')
+    historyApiFallback: true,
+    contentBase: path.join(__dirname, '..', 'src', 'assets')
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin({

@@ -1,5 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {render} from 'react-dom';
-import {App} from './App';
+import {App} from './app';
+import {BrowserRouter as Router} from 'react-router-dom';
 
-render(<App />, document.getElementById('main'));
+const Main: FC = () => {
+  return (
+    <>
+      <Router>
+        <App />
+      </Router>
+    </>
+  );
+};
+
+render(<Main />, document.getElementById('main'));
